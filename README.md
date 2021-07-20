@@ -1,6 +1,6 @@
-How to create an image and application's environment using Docker
+# How to create an image and application's environment using Docker
 
-1. Create the directory and subdirectories:
+### 1. Create the directory and subdirectories:
 #project’s directory
 
 *mkdir quickstart\docker*
@@ -17,7 +17,7 @@ How to create an image and application's environment using Docker
 
 *mkdir quickstart\docker/docker/application*
 
-2. Put the app into the quickstart\docker/application directory:
+### 2. Put the app into the quickstart\docker/application directory:
 
 *cd quickstart\docker/application*
 
@@ -35,12 +35,12 @@ How to create an image and application's environment using Docker
 
 *httpd.serve\forever()*
 
-3. Get the application’s environment from the dockerhub:
-3.1. Open the directory:
+### 3. Get the application’s environment from the dockerhub:
+#### 3.1. Open the directory:
 
 *cd quickstart\docker/docker/application*
 
-3.2. Create a file named **dockerfile** with the following content:
+#### 3.2. Create a file named **dockerfile** with the following content:
 
 #use base image from the registry
 
@@ -62,10 +62,10 @@ How to create an image and application's environment using Docker
 
 *CMD ["python", "/app/application.py"]*
 
-4. Create an image:
+### 4. Create an image:
 
 *docker build . -f-docker/application/Dockerfile -t exampleapp*
 
-5. Now it’s possible to see the list of images:
+### 5. Now it’s possible to see the list of images:
 
 $ *docker images*
